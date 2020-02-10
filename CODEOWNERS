@@ -1,24 +1,3 @@
-# When you've created a repository and work with multiple people on the repository,
-# if there are different developers which are responsible for specific sections of the application,
-# then it is highly advisable to assign one or multiple developer(s) as CODEOWNER for each section.
-
-# Instructions to set this up.
-# 1. In your repository, go to "Settings".
-# 2. Click on "Branches".
-# 3. Click on "Add rule".
-# 4. Inside "Branch name pattern" type your targeted branch which you want to protect (most of the times: "master").
-# 5. Check the box "Require pull request reviews before merging".
-# 6. Then some new boxes will appear. Check the box "Require review from Code Owners".
-# 7. Click on "Create".
-
-# Now we've configured the repository.
-# Next steps are to assign CODEOWNERS to specific sections of the repository. Or even to all sections.
-# In the root of your project, on the protected branch ofcourse, create a new file: "CODEOWNERS" (no extension needed)!
-# OR even better, simply copy this file and paste it in the root of your project.
-
-# Uncomment the lines below by removing the "#" and edit "user_name" to match the user name of CODEOWNER.
-# Next, on the left side, select the section that you want to assign the CODEOWNER to.
-
 ### All sections
 *                       @buzzzlightyear
 
