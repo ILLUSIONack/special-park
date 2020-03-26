@@ -1,1 +1,6 @@
-vs_code/
+# General
+.DS_Store
+.vs_code/
+
+# Generated files
+*.pyc
