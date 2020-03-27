@@ -31,16 +31,16 @@
 
 When making use of a parking garage. We face two problems:
 
-- Waste of papercards;
+- Waste of papertickets;
 - Waiting lines when driving in or out of the garages, and also at the payment terminal.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-We want to build a platform on which people can register. With there account, they can go to different parking garages (associated with our platform). 
+We want to build a platform on which users can register. With their account, they can go to different parking garages (associated with our platform). 
 
-When they want to make use of the parking garage, they can easily drive inside the parking garage without rolling down the windows to get a papercard. Out technical component installed by that garage, will scan your license plate and validate your account. When validation succeeded, the gate will open. 
+When they want to make use of the parking garage, they can easily drive inside the parking garage without rolling down the windows to get a paperticket. Our technical component installed by the garage, will scan your license plate and validate your account. Upon succes of validation, the gate will open. 
 
-When you're done and want to leave, you can skip the payment terminal and drive straight to the exit. At the exit, the technical component will scan you license plate again. The system will process your expenses and then open the gate. 
+When you're done and want to leave, you can skip the payment terminal and drive straight to the exit. At the exit, the technical component will scan your license plate again. The system will process your expenses and then open the gate. 
 
 The bill will be added to your total billing for that month. The total bill will be subtracted from your bank account at the end of every month.
 
