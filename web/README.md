@@ -26,3 +26,8 @@ Terminate the environment
 ```
 docker-compose down
 ```
+
+## Install node modules and run webapp <a name = "getting_started"></a>
+- npm install in the root directory for the webapp to install all node_modules
+- node app.js to run the webapp
+- To track changed files and automatically restart server install nodemon and run the app with the following cmd: nodemon app.js
