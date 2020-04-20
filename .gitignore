@@ -1,6 +1,7 @@
 # General
 .DS_Store
 .vs_code/
+**/.env
 
 # Generated files
 *.pyc
