@@ -82,7 +82,7 @@ The bill will be added to your total billing for that month. The total bill will
         <a href="https://github.com/ahmadkurdo">
           <img width="150" height="150" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/52387586_1345463722261957_3945269929183281152_n.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_ohc=-llHF8yiZj8AX_Ui3xY&_nc_ht=scontent-amt2-1.xx&oh=c276581ed9f8d42a03270251aefbc5e5&oe=5ED09891">
           </br>
-          Ahmed Rasid
+          Ahmed Rashid
         </a>
       </td>
     </tr>
