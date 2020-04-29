@@ -172,6 +172,9 @@ PUT http://127.0.0.1:8000/users/edit_car/your_license_plate
 ```
 
 ## Start a parking session <a name="start_parking">
+
+You want to enter a parking garage. When this request has been send and approved by the REST API, the user will receive an notification via e-mail or text.
+
 ##### URL
 ```
 POST http://127.0.0.1:8000/garage/garage_hash/your_license_plate
@@ -190,6 +193,9 @@ POST http://127.0.0.1:8000/garage/garage_hash/your_license_plate
 ```
 
 ## Stop a parking session <a name="stop_parking">
+
+You want to exit the parking garage. When this request has been send and processed by the REST API, the user will receive an notification via e-mail or text.
+
 ##### URL
 ```
 POST http://127.0.0.1:8000/garage/garage_hash/your_license_plate

@@ -1,28 +1,9 @@
-# Software for the Raspberry Pi 4
+#### Special Park Technical Component - License Plate Scanner
 
-## Table of Contents
+---
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Usage](#usage)
+# Explanation
 
-## About <a name = "about"></a>
+We want visitors to gain access to a parking garage with only their license plate. This component, a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) will be stationed at the ports of a parking garage. This component will have the job to scan license plates from incoming cars and send validation requests to the server (REST API). The server will respond with a *status*: true or false. True for a succesful validation and false for a does not exist error or account is incomplete.
 
-This is the software for the Raspberry Pi 4.
-
-## Getting Started <a name = "getting_started"></a>
-
-- Install Docker
-- Install docker-compose
-
-## Usage <a name = "usage"></a>
-
-Start the environment
-```
-docker-compose up -d
-```
-
-Terminate the environment
-```
-docker-compose down
-```
+This module represents the software which the Raspberry Pi 4 will run in order to scan license plates, make validation requests and give visitors access to the parking garage.
