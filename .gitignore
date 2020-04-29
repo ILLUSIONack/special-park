@@ -5,6 +5,7 @@
 
 # Generated files
 *.pyc
+*.idea/
 
 # npm (express)
 lib-cov
@@ -22,3 +23,10 @@ results
 build
 
 node_modules
+.idea/inspectionProfiles/Project_Default.xml
+api/.env-example
+.idea/workspace.xml
+api/.idea/vcs.xml
+api/.idea/modules.xml
+api/.idea/misc.xml
+api/.idea/inspectionProfiles/Project_Default.xml

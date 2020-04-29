@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "api": "pipenv run python manage.py runserver"
+    "api": "pipenv install && pipenv run python manage.py runserver"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }
