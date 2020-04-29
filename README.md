@@ -73,14 +73,14 @@ The bill will be added to your total billing for that month. The total bill will
       </td>
       <td align="center">
         <a href="https://github.com/ILLUSIONack">
-          <img width="150" height="150" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-1/31531602_1612879725447057_5402279220040695808_n.jpg?_nc_cat=104&_nc_sid=dbb9e7&_nc_ohc=gzw6rA4aPnsAX9mLe58&_nc_ht=scontent-amt2-1.xx&oh=8d174d394b98230831482f2058a51cbd&oe=5EA10F68">
+          <img width="150" height="150" src="https://avatars1.githubusercontent.com/u/40841153?s=400&u=320b9992083ed815bef5e5aa4405b250fef5f28a&v=4">
           </br>
           Usman Siddiqui
         </a>
       </td>
       <td align="center">
         <a href="https://github.com/ahmadkurdo">
-          <img width="150" height="150" src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.0-9/15825752_837473716394296_3168531526687396920_n.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_ohc=HqsxTERDt9cAX_nXPnC&_nc_ht=scontent-ams4-1.xx&oh=af09322ea6334ccebd3de911811a58f2&oe=5EA11FC9">
+          <img width="150" height="150" src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/52387586_1345463722261957_3945269929183281152_n.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_ohc=-llHF8yiZj8AX_Ui3xY&_nc_ht=scontent-amt2-1.xx&oh=c276581ed9f8d42a03270251aefbc5e5&oe=5ED09891">
           </br>
           Ahmed Rasid
         </a>
