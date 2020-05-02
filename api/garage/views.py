@@ -5,7 +5,7 @@ from .models import Garage
 from .serializers import GarageSerializer
 from users.services import RequestHandler, CustomerService
 from rest_framework import status
-from . services import TimeTableService, Visitor
+from .services import Visitor
 
 # TODO:
 # Handle objects that does not exists with correct error handling

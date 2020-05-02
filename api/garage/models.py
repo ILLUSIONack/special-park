@@ -1,6 +1,5 @@
 from django.db import models
-from django.db import models
-from users.models import Car
+from users.models import Car, Transactions
 from django.utils import timezone
 from django.contrib.auth.models import User
 
@@ -24,3 +23,10 @@ class TimeTable(models.Model):
     check_out_time = models.DateTimeField(null=True)
     car = models.ForeignKey(Car, on_delete=models.CASCADE)
     garage = models.ForeignKey(Garage, on_delete=models.CASCADE)
+
+    def getCheckIn(self):
+        return self.check_in_time
+
+    def saveTime(self, check_in, car, user):
+        trans = Transactions(check_in_time=check_in, check_out_time=timezone.now(), car=car, garage=Garage.objects.get(id=1), user=user)
+        trans.save()
