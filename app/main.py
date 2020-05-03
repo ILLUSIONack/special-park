@@ -6,24 +6,22 @@ import numpy as np
 from picamera import PiCamera
 from time import sleep
 
-# https://circuitdigest.com/microcontroller-projects/license-plate-recognition-using-raspberry-pi-and-opencv
-
 camera = PiCamera()
 
 def main():
-    for i in range(10):
+    for i in range(5):
         take_picture(grayify)
 
 def grayify(file):
-    print(f'extracting..')
-    
+    print('extracting..')
+
     # Opening the image
     img_color = cv2.imread(file, 1) # options: 1, -1 and 0. 0 = grayscale
     img = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY) #convert to grey scale
     
     # Removing the unwanted details from an image with blur
     # destination_image = cv2.bilateralFilter(source_image, diameter of pixel, sigmaColor, sigmaSpace)
-    img = cv2.bilateralFilter(img, 11, 25, 25)
+    img = cv2.bilateralFilter(img, 11, 17, 17)
     
     # Edge detection with the canny edge method from OpenCV
     # destination_image = cv2.Canny(source_image, thresholdValue 1, thresholdValue 2)
@@ -73,10 +71,10 @@ def grayify(file):
     except:
         pass
 
-    cv2.imwrite('picture2/haha7.jpg', edged)
-    cv2.imwrite('picture2/haha8.jpg', img_color)
-    cv2.imwrite('picture2/haha9.jpg', new_image)
-    cv2.imwrite('picture2/haha10.jpg', cropped)
+    cv2.imwrite('temp/edged.jpg', edged)
+    cv2.imwrite('temp/color.jpg', img_color)
+    cv2.imwrite('temp/masked.jpg', new_image)
+    cv2.imwrite('temp/cropped.jpg', cropped)
 
 def extract(text):
     text = text.split()
@@ -89,9 +87,9 @@ def extract(text):
     return license_plate
 
 def take_picture(callback):
-    file = 'picture2/image.jpg'
+    file = 'temp/image.jpg'
     camera.capture(file)
     callback(file)
-    os.remove('picture2/image.jpg')
+    os.remove('temp/image.jpg')
 
 main()
