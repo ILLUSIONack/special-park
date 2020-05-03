@@ -7,7 +7,7 @@ from picamera import PiCamera
 from time import sleep
 
 camera = PiCamera()
-characters = 6
+characters = 8
 
 def main(length):
     for i in range(5):
@@ -68,7 +68,10 @@ def grayify(file, length):
         cropped = img[topx:bottomx+1, topy:bottomy+1]
         
         text = pytesseract.image_to_string(cropped, config='--psm 11')
-        print(extract(text, length))
+        result = extract(text, length)
+        if result:
+            print(result)
+
     except:
         pass
 
@@ -77,7 +80,7 @@ def grayify(file, length):
     cv2.imwrite('temp/masked.jpg', new_image)
     cv2.imwrite('temp/cropped.jpg', cropped)
 
-def extract(text, length+2):
+def extract(text, length):
     text = text.split()
     license_plate = ''
     
