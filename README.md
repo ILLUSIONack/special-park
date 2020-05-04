@@ -6,9 +6,8 @@
 
 <div align="center">
 
-[![Special Park](https://img.shields.io/badge/hackathon-name-orange.svg)](http://specialpark.nl)
+[![Build Status](https://travis-ci.com/buzzzlightyear/special-park.svg?branch=master)](https://travis-ci.com/buzzzlightyear/special-park)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/buzzzlightyear/special-park/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 </div>
