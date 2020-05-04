@@ -1,0 +1,158 @@
+.sidebar-brand-icon img {
+    height: 40px;
+    width: auto;
+}
+
+.landingspageHeader {
+    position: relative;
+    height: 650px;
+    background: linear-gradient(#4e73df, #6586e4);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+}
+  
+.landingspageHeader h1 {
+    margin: 0;
+    padding-top: 80px;
+    color: #fff;
+    font-size: 50px;
+}
+
+.headerText {
+    padding-right: 100px;
+}
+
+.slogan {
+    font-size: 20px;
+}
+
+.customStyle {
+    border: none !important;
+    border-radius: 50px;
+}
+
+.customStyle .icon {
+    background: none;
+    padding-left: 15px;
+}
+
+.headerTitle h1 {
+    font-size: 60px;
+}
+
+.headerTitle p:nth-child(1) {
+    font-size: 30px;
+}
+
+.landingspageHeader p {
+    color: #fff;
+}
+
+.landingspageHeader h1, 
+.landingspageHeader h2, 
+.landingspageHeader h3,
+.landingspageHeader h4,
+.landingspageHeader h5,
+.landingspageHeader h6 {
+    color: #fff;
+}
+
+.landingspageHeader h1 {
+    font-family: 'Bungee', cursive;
+}
+
+.carparkImage {
+    padding-top: 150px;
+}
+
+.my-space {
+    margin-top: 50px;
+}
+
+.bigDot {
+    color: #f2f169;
+}
+
+.carparkImage img {
+    width: 550px;
+}
+
+.carparkImage {
+    text-align: right;
+}
+
+.parkSignImage img {
+    width: 175px;
+    margin-top: -40px;
+}
+
+#introduction {
+    margin-bottom: 50px;
+}
+
+#possibilities,
+#partners {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#register {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+#introduction h2,
+#possibilities h2,
+#partners h2,
+#register h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 40px;
+}
+
+#introduction h2,
+#introduction h3,
+#possibilities h2,
+#possibilities h3,
+#partners h2,
+#partners h3,
+#register h2,
+#register h3 {
+    color: #4e73df;
+}
+
+#introduction h3 {
+    font-size: 26px;
+}
+
+.textImage {
+    text-align: center;
+}
+
+.textImage img {
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.dottedLine {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-top: 10px dashed #4e73df20;
+    border-radius: 0px;
+}
+
+.partnerImage {
+    text-align: center;
+}
+
+.partnerImage img {
+    height: 70px;
+}
+
+#register a.customStyle {
+    font-size: 25px;
+}
+
+.sticky-footer {
+    background-color: #4e73df !important;
+    color: #fff;
+}
