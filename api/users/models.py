@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, AbstractUser
 from django.utils import timezone
 
 class Car(models.Model):
-    license_plate_number = models.CharField(max_length=12, primary_key=True)
+    license_plate_number = models.CharField(max_length=12, unique=True)
     license_country_code = models.CharField(max_length=2)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     date_added = models.DateTimeField(default=timezone.now)

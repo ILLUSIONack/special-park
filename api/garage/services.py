@@ -15,8 +15,8 @@ class Visitor:
         if not self.isValid(license_plate):
             return
             
-        self.setTime(license_plate)
         self.setCar(license_plate)
+        self.setTime(license_plate)
         self.setStatus()
     
     def isValid(self, license_plate):
@@ -34,7 +34,7 @@ class Visitor:
     
     def setTime(self, license_plate):
         try:
-            self.time_table = TimeTable.objects.get(car_id=license_plate)
+            self.time_table = TimeTable.objects.get(car_id=self.car)
         except ObjectDoesNotExist as err:
             print(f'Error message: {err}')
     

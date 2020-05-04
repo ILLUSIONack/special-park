@@ -64,6 +64,14 @@ class RequestHandler:
     def add_car_id_to_dict(self, key_name, car_object):
         self.dictionary[key_name] = self.car_object.id
 
+    def swap_element_in_dictionary(self, element_to_swap, insert_position_key):
+        element = self.dictionary[str(element_to_swap)]
+        self.dictionary[str(insert_position_key)] = element
+
+    def capitalize_license_plate(self):
+        license_plate = self.dictionary['license_plate_number']
+        self.dictionary['license_plate_number'] = license_plate.upper()
+
 class CarService:
     car = None
 

@@ -154,8 +154,9 @@ PUT http://127.0.0.1:8000/users/edit_car/your_license_plate
 ##### BODY
 ```
 {
-    "license_country_code": "NL",
-    "license_plate_number": "19-JJ-00"
+	"license_plate_number":"88-PS-OO",
+	"new_license_plate_number":"88-PS-RE",
+	"license_country_code": "NL"
 }
 ```
 
@@ -168,7 +169,7 @@ PUT http://127.0.0.1:8000/users/edit_car/your_license_plate
 
 ###### RESPONSE
 ```
->> "message": "Your car has been updated"
+>> "message": "Jouw voertuig is aangepast!"
 ```
 
 ## Start a parking session <a name="start_parking">
