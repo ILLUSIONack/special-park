@@ -36,7 +36,6 @@ POST http://127.0.0.1:8000/users/registration/
 ##### BODY
 ```
 {
-    "username": "joker1234",
     "email": "joker1234@gmail.com",
     "password1": "vitamineD",
     "password2": "vitamineD"
