@@ -5,9 +5,7 @@ from .models import Car, CustomerUser
 from .serializers import CarSerializer, CustomerSerializer
 from .services import RequestHandler, CarService, CustomerService, SerializerHandler
 from rest_framework import status
-
-# TODO:
-# Handle objects that does not exists with correct error handling
+from django.core.exceptions import ObjectDoesNotExist
 
 @api_view(["POST", "GET"])
 @permission_classes([IsAuthenticated])
@@ -19,6 +17,7 @@ def user_car(request):
 
     # Handling the request methods
     if request.method == "POST":
+        request_handel.capitalize_license_plate()
         serializer_handler.createInstance(
             serializer=CarSerializer(data=request_handel.get_dictionary()),
             newObjectsMessage='new_car', message='new car has been added!')
@@ -34,13 +33,16 @@ def user_car(request):
 
 @api_view(["DELETE", "PUT"])
 @permission_classes([IsAuthenticated])
-def edit_car(request, license_plate):
+def edit_car(request):
     # Initializing the needed classes for the endpoint
-    serializer_handler = SerializerHandler()
-    car_service = CarService(license_plate)
-    car = car_service.getCar()
     request_handel = RequestHandler(request)
     request_handel.add_user_id_to_dictionary("owner")
+    request_handel.capitalize_license_plate()
+    serializer_handler = SerializerHandler()
+    try:
+        car = Car.objects.get(license_plate_number=request_handel.get_value_from_request_dict('license_plate_number'))
+    except ObjectDoesNotExist:
+        return JsonResponse({'error': 'Auto bestaat niet'})
 
     # Handling the request methods
     if request.method == 'DELETE':
@@ -48,10 +50,11 @@ def edit_car(request, license_plate):
         return JsonResponse({'message': 'car deleted'})
 
     elif request.method == 'PUT':
+        request_handel.swap_element_in_dictionary('new_license_plate_number','license_plate_number')
         serializer_handler.updateInstance(
             CarSerializer(car,
                           data=request_handel.get_dictionary()),
-            newObjectsMessage='updated car', message='Your car has been updated')
+            newObjectsMessage='updated car', message='Jouw voertuig is aangepast!')
         return JsonResponse(serializer_handler.data, status=serializer_handler.status)
 
 @api_view(["GET", "POST", "PUT"])

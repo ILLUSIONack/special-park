@@ -35,6 +35,5 @@ class CustomerSerializer(serializers.ModelSerializer):
         instance.house_number = validated_data.get('house_number', instance.house_number)
         instance.zip_code = validated_data.get('zip_code', instance.zip_code)
         instance.is_garage_owner = validated_data.get('is_garage_owner', instance.is_garage_owner)
-        
         instance.save()
         return instance

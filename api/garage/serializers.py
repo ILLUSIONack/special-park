@@ -3,7 +3,7 @@ from .models import Garage, TimeTable
 
 class GarageSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Garage
+        model = Garage()
         fields = ['id',
                   'name',
                   'address',
