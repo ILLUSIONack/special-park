@@ -8,4 +8,5 @@ install:
   - cd api/ && pipenv install
 
 script:
-  - pipenv run python manage.py test --noinput
+  - python manage.py makemigrations --merge --noinput
+  - python manage.py test --noinput
