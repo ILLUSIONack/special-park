@@ -28,10 +28,11 @@
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
-When making use of a parking garage. We face two problems:
+When making use of a parking garage. We face a few problems:
 
 - Waste of papertickets;
-- Waiting lines when driving in or out of the garages, and also at the payment terminal.
+- Waiting lines when driving in or out of the garages, and also at the payment terminal;
+- And physical contact with devices, which some people are not happy about with the current covid-19 crisis.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 

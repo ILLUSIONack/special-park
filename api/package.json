@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "api": "pipenv install && pipenv run python manage.py runserver",
-    "test": "pipenv run python manage.py test"
+    "api": "yarn initialize && yarn migrate && yarn runserver",
+    "initialize": "pipenv install",
+    "migrate": "pipenv run python manage.py makemigrations --merge --noinput && pipenv run python manage.py migrate",
+    "runserver": "pipenv run python manage.py runserver",
+    "test": "pipenv run python manage.py makemigrations --merge --noinput && pipenv run python manage.py test --noinput"
   },
-  "dependencies": {
-    "dotenv": "^8.2.0"
-  }
+  "dependencies": {}
 }

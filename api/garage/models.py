@@ -28,5 +28,5 @@ class TimeTable(models.Model):
         return self.check_in_time
 
     def saveTime(self, check_in, car, user):
-        trans = Transactions(check_in_time=check_in, check_out_time=timezone.now(), car=car, garage=Garage.objects.get(id=1), user=user)
+        trans = Transactions(check_in_time=check_in, check_out_time=timezone.now(), car=car, garage=Garage.objects.all()[:1].get(), user=user)
         trans.save()

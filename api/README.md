@@ -11,8 +11,7 @@
 5. [Retrieve all cars](#get_cars)
 6. [Delete a car](#delete_car)
 7. [Update a car](#update_car)
-8. [Start a parking session](#start_parking)
-9. [Stop a parking session](#stop_parking)
+8. [Start or stop a parking session](#start_stop_parking)
 
 ## Run server <a name="run_server"></a>
 
@@ -171,44 +170,19 @@ PUT http://127.0.0.1:8000/users/edit_car/your_license_plate
 >> "message": "Jouw voertuig is aangepast!"
 ```
 
-## Start a parking session <a name="start_parking">
+## Start or stop a parking session <a name="start_stop_parking">
 
 You want to enter a parking garage. When this request has been send and approved by the REST API, the user will receive an notification via e-mail or text.
 
 ##### URL
 ```
-POST http://127.0.0.1:8000/garage/garage_hash/your_license_plate
-```
-
-##### BODY
-```
-{
-    "service": "enter"
-}
+POST http://127.0.0.1:8000/garage/port/your_license_plate
 ```
 
 ###### RESPONSE
+There are different responses possible.
 ```
->> "status": true
-```
-
-## Stop a parking session <a name="stop_parking">
-
-You want to exit the parking garage. When this request has been send and processed by the REST API, the user will receive an notification via e-mail or text.
-
-##### URL
-```
-POST http://127.0.0.1:8000/garage/garage_hash/your_license_plate
-```
-
-##### BODY
-```
-{
-    "service": "exit"
-}
-```
-
-###### RESPONSE
-```
->> "status": true
+>> "status": false   # Visitor is a client and does not have a parking action going. So we start one.
+>> "status": true    # Visitor is a client and has a parking action going. So we stop it.
+>> "status": null    # The visitor is not a client, the license plate is not readable or incorrect, an empty parameter.
 ```

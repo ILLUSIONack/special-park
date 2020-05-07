@@ -36,14 +36,14 @@ class Visitor:
         try:
             self.time_table = TimeTable.objects.get(car_id=self.car)
         except ObjectDoesNotExist as err:
-            print(f'Error message: {err}')
+            return None
     
     def setCar(self, license_plate):
         try:
             self.car = Car.objects.get(license_plate_number=license_plate)
             self.user = self.car.getOwner()
         except ObjectDoesNotExist as err:
-            print(f'Error message: {err}')
+            return None
     
     def setStatus(self):
         if self.time_table and self.car:
@@ -56,7 +56,7 @@ class Visitor:
             # The visitor wants to go in
             self.status['status'] = False
             self.status['error'] = 'De bezoeker betreedt de garage.'
-            new_visitor = TimeTable(car=self.car, garage=Garage.objects.get(id=1))
+            new_visitor = TimeTable(car=self.car, garage=Garage.objects.all()[:1].get())
             new_visitor.save()
         else:
             # The visitor does not exist
