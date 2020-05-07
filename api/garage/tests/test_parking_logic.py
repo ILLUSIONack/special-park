@@ -7,7 +7,7 @@ from garage.models import Garage, TimeTable
 from users.models import Car, Transactions
 from django.contrib.auth.models import User
 from django.db.models.base import ObjectDoesNotExist
-from specialpark.tests import success, decode_response
+from specialpark.tests import success
 
 class TestParkingLogic(TestCase):
     def setUp(self):
