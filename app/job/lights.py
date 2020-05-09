@@ -7,17 +7,17 @@ yellow  = LED(5)
 
 def success():
     green.on()
-    sleep(2.5)
+    sleep(2)
     green.off()
 
 def failure():
     red.on()
-    sleep(2.5)
+    sleep(2)
     red.off()
 
 def loading():
-    for i in range(10):
+    for i in range(20):
         yellow.on()
-        sleep(0.2)
+        sleep(0.1)
         yellow.off()
-        sleep(0.2)
+        sleep(0.1)
