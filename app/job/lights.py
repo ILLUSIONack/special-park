@@ -17,7 +17,13 @@ def failure():
 
 def loading():
     for i in range(10):
-        print(i)
+        green.on()
         yellow.on()
-        sleep(1)
+        red.on()
+        print('LED on')
+        sleep(0.1)
+        green.off()
         yellow.off()
+        red.off()
+        print('LED off')
+        sleep(0.1)
