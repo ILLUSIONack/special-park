@@ -21,3 +21,8 @@ def loading():
         sleep(0.1)
         yellow.off()
         sleep(0.1)
+
+if __name__ == '__main__':
+    loading()
+    failure()
+    success()
