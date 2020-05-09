@@ -18,5 +18,6 @@ def failure():
 def loading():
     for i in range(10):
         yellow.on()
-        sleep(0.1)
+        sleep(0.2)
         yellow.off()
+        sleep(0.2)
